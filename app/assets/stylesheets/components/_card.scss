@@ -1,0 +1,35 @@
+.card {
+  height: 300px;
+  box-shadow: 20px 20px 0px 0px #d84c73;
+  margin: 20px;
+}
+
+.card-img {
+  height: 200px;
+  background-size: cover;
+}
+
+.card-details {
+  height: 100px;
+  background-color: white;
+}
+
+.card-title {
+  padding: 15px;
+}
+
+.card-title a:link, a:hover, a:active, a:visited {
+  text-decoration: none;
+}
+
+a {
+  color: #5c3b6f;
+  &:hover {
+    color: #5c3b6f;
+  }
+}
+
+.card-description {
+  padding-left: 15px;
+  font-size: 12px;
+}

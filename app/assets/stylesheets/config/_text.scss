@@ -1,0 +1,13 @@
+h1 {
+  font-family: $headers-font;
+  color: #000;
+}
+
+p {
+  font-family: $body-font;
+  color: #534e55;
+}
+
+html { font-size: 62.5%; }  /* =10px */
+body { font-size: 1.4rem; } /* =14px */
+h1   { font-size: 2.2rem; } /* =22px */

@@ -1,2 +1,59 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="wrapper">
+  <div class="main">
+    <div class="navbar navbar-expand-sm navbar-light navbar-blog">
+      <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <% end %>
+
+
+   <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+      <!-- <div class="content">
+        <div class="container-fluid"> -->
+
+            <button class="navbar-toggler" type="button" id="sidebarCollapse" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+       <!--  </div>
+      </div> -->
+    </div>
+    <div class="cards">
+      <% @all_posts.each do |post| %>
+        <% link_to post.url, post.url %>
+          <div class="card">
+            <div class="card-img" style="background-image: url('https://unsplash.it/500/400?random')";></div>
+            <div class="card-details">
+              <div class="card-title"> <%= post.title %> </div>
+              <div class="card-description"><%= post.description %></div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+    </div>
+
+    <ul class="list-unstyled components">
+      <p>Dummy Heading</p>
+      <li class="active">
+        <a href="#">Blog 1</a>
+      </li>
+      <li>
+        <a href="#">Blog 2</a>
+      </li>
+      <li>
+        <a href="#">Blog 3</a>
+      </li>
+      <li>
+        <a href="#">Blog 4</a>
+      </li>
+      <li>
+        <a href="#">Blog 5</a>
+      </li>
+    </ul>
+  </nav>
+</div>

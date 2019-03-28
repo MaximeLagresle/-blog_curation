@@ -1,1 +1,36 @@
 // Specific CSS for your home-page
+.wrapper {
+  background-color: #ededed;
+  display: flex;
+  align-items: stretch;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+#sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+}
+
+#sidebar.active {
+    margin-right: -250px;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-right: -250px;
+  }
+  #sidebar.active {
+    margin-right: 0;
+  }
+}
