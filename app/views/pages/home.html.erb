@@ -1,9 +1,13 @@
 <div class="wrapper">
   <div class="main">
+
+    <!-- navbar -->
     <div class="navbar navbar-expand-sm navbar-light navbar-blog">
-      <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <!-- Logo -->
+      <%= link_to root_path, class: "navbar-wagon-brand" do %>
+        <%= image_tag "logo.svg", height: 40 %>
       <% end %>
+
 
 
    <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +23,12 @@
        <!--  </div>
       </div> -->
     </div>
+
+
+    <!-- cards grid -->
     <div class="cards">
       <% @all_posts.each do |post| %>
-        <% link_to post.url, post.url %>
+        <% link_to post.title, post.url, :target => "_blank" %>
           <div class="card">
             <div class="card-img" style="background-image: url('https://unsplash.it/500/400?random')";></div>
             <div class="card-details">
@@ -32,28 +39,22 @@
       <% end %>
     </div>
   </div>
+
+
+  <!-- sidebar https://bootstrapious.com/p/bootstrap-sidebar -->
   <nav id="sidebar">
     <div class="sidebar-header">
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
     </div>
 
-    <ul class="list-unstyled components">
-      <p>Dummy Heading</p>
-      <li class="active">
-        <a href="#">Blog 1</a>
-      </li>
-      <li>
-        <a href="#">Blog 2</a>
-      </li>
-      <li>
-        <a href="#">Blog 3</a>
-      </li>
-      <li>
-        <a href="#">Blog 4</a>
-      </li>
-      <li>
-        <a href="#">Blog 5</a>
-      </li>
-    </ul>
+    <div class="blogs-list">
+      <p>BLOGS FOLLOWED</p>
+      <% @all_blogs.each do |blog| %>
+        <div class="blog-name">
+          <%= blog.name %>
+        </div>
+      <% end %>
+    </div>
   </nav>
 </div>
+

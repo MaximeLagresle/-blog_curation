@@ -3,4 +3,5 @@ class PagesController < ApplicationController
     @all_posts = Post.all
     @all_blogs = Blog.all
   end
+
 end
