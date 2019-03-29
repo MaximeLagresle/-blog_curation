@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.5.3'
 
 gem 'stream_rails'
+gem 'feedjira'
 
 gem 'devise'
 
