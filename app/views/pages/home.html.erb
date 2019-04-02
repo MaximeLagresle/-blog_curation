@@ -52,8 +52,13 @@
     <div class="blogs-list">
       <p>BLOGS FOLLOWED</p>
       <% @all_blogs.each do |blog| %>
-        <div class="blog-name">
-          <%= blog.name %>
+        <div class="blog-combo">
+          <div class="blog-photo">
+            <%= cl_image_tag(blog.photo) %>
+          </div>
+          <div class="blog-name">
+            <%= blog.name %>
+          </div>
         </div>
       <% end %>
     </div>

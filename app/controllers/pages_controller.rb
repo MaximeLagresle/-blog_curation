@@ -3,5 +3,4 @@ class PagesController < ApplicationController
     @all_posts = Post.all.order('published desc')
     @all_blogs = Blog.all
   end
-
 end

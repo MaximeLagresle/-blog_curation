@@ -13,6 +13,7 @@ a16z = Blog.create(
   url: 'https://a16z.com/feed/',
   description: 'Founded in 2009 by Marc Andreessen and Ben Horowitz, Andreessen Horowitz (known as "a16z") is a venture capital firm in Silicon Valley, California that backs bold entrepreneurs building the future through technology. We are stage agnostic: We invest in seed to late-stage companies, and both consumer and enterprise technology companies.',
   tag: 'growth strategy'
+  # photo: 'https://res.cloudinary.com/dnftriuml/image/upload/v1554214571/fdmvmwugnxpvpvk6mj6h.png'
 )
 
 #Blog 2: intercom
@@ -22,6 +23,7 @@ intercom = Blog.create(
   url: 'https://www.intercom.com/blog/feed',
   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   tag: 'growth strategy'
+  # photo: 'https://res.cloudinary.com/dnftriuml/image/upload/v1554214618/ztkiinhib5otmmpldgww.png'
 )
 
 # #Post 1: a16z

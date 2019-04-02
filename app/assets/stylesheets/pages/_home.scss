@@ -37,3 +37,14 @@
     margin-right: 0;
   }
 }
+
+.blog-combo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.blog-photo {
+  width: 40px;
+  border-radius: 50%;
+}
