@@ -8,7 +8,9 @@
         <%= image_tag "logo.svg", height: 40 %>
       <% end %>
 
-
+    <div class="tagline">
+      <p>A moment of calm in the noisy world of growth and tech</p>
+    </div>
 
    <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,6 +32,11 @@
       <% @all_posts.each do |post| %>
         <% link_to post.title, post.url, :target => "_blank" %>
           <div class="card">
+              <% @all_blogs.each do |blog| %>
+            <div class="blog-photo">
+              <%= cl_image_tag(post.blog.photo, :width=>40, :crop=>"scale") %>
+            </div>
+            <% end %>
             <div class="card-img" style="background-image: url('https://unsplash.it/500/400?random')";></div>
             <div class="card-details">
               <div class="card-published">
@@ -54,7 +61,7 @@
       <% @all_blogs.each do |blog| %>
         <div class="blog-combo">
           <div class="blog-photo">
-            <%= cl_image_tag(blog.photo) %>
+            <%= cl_image_tag(blog.photo, :width=>40, :crop=>"scale") %>
           </div>
           <div class="blog-name">
             <%= blog.name %>
