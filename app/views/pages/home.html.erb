@@ -1,54 +1,56 @@
 <div class="wrapper">
-  <div class="main">
+    <div class="main">
 
-    <!-- navbar -->
-    <div class="navbar navbar-expand-sm navbar-light navbar-blog">
-      <!-- Logo -->
-      <%= link_to root_path, class: "navbar-wagon-brand" do %>
-        <%= image_tag "logo.svg", height: 40 %>
-      <% end %>
-
-    <div class="tagline">
-      <p>A moment of calm in the noisy world of growth and tech</p>
-    </div>
-
-   <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button> -->
-
-      <!-- <div class="content">
-        <div class="container-fluid"> -->
-
-            <button class="navbar-toggler" type="button" id="sidebarCollapse" data-toggle="collapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-       <!--  </div>
-      </div> -->
-    </div>
+      <!-- navbar -->
+      <div class="navbar navbar-expand-sm navbar-light navbar-blog">
+        <!-- Logo -->
+        <%= link_to root_path, class: "navbar-wagon-brand" do %>
+          <%= image_tag "logo.svg", height: 40 %>
+        <% end %>
 
 
-    <!-- cards grid -->
-    <div class="cards">
-      <% @all_posts.each do |post| %>
-        <% link_to post.title, post.url, :target => "_blank" %>
+     <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button> -->
+
+        <!-- <div class="content">
+          <div class="container-fluid"> -->
+
+        <button class="navbar-toggler" type="button" id="sidebarCollapse" data-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+         <!--  </div>
+        </div> -->
+        <div class="tagline">
+          <h3>A moment of calm in the noisy world of growth and tech.</h3>
+        </div>
+
+      </div>
+
+      <!-- cards grid -->
+      <div class="cards">
+        <% @all_posts.each do |post| %>
           <div class="card">
-              <% @all_blogs.each do |blog| %>
-            <div class="blog-photo">
-              <%= cl_image_tag(post.blog.photo, :width=>40, :crop=>"scale") %>
-            </div>
+            <%= link_to post.url, target: :_blank do %>
+              <%# @all_blogs.each do |blog| %>
+                <!-- <div class="blog-photo">
+                  <%#= cl_image_tag(post.blog.photo, :width=>40, :crop=>"scale") %>
+                </div> -->
+              <%# end %>
+              <div class="card-img" style="background-image: url('https://unsplash.it/500/400?random')";></div>
+              <div class="card-details">
+                <div class="card-published">
+                  <i> Published <%= time_ago_in_words(post.published)%> ago.</i></div>
+                <div class="card-title"> <h3><%= post.title %></h3> </div>
+                <div class="card-description">
+                  <p><%= simple_format(post.description) %></p>
+                </div>
+              </div>
             <% end %>
-            <div class="card-img" style="background-image: url('https://unsplash.it/500/400?random')";></div>
-            <div class="card-details">
-              <div class="card-published">
-                <i> Published <%= time_ago_in_words(post.published)%> ago.</i></div>
-              <div class="card-title"> <%= post.title %> </div>
-              <div class="card-description"><%= post.description %></div>
-            </div>
           </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
-
 
   <!-- sidebar https://bootstrapious.com/p/bootstrap-sidebar -->
   <nav id="sidebar">
@@ -61,7 +63,7 @@
       <% @all_blogs.each do |blog| %>
         <div class="blog-combo">
           <div class="blog-photo">
-            <%= cl_image_tag(blog.photo, :width=>40, :crop=>"scale") %>
+            <%= cl_image_tag(blog.photo, :width=>25, :crop=>"scale") %>
           </div>
           <div class="blog-name">
             <%= blog.name %>

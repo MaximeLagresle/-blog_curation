@@ -1,6 +1,8 @@
 .navbar-blog {
   justify-content: space-between;
   background: white;
+  position: relative;
+  padding: 30px;
 }
 
 .navbar-blog .navbar-collapse {
@@ -9,4 +11,15 @@
 
 .navbar-blog .navbar-brand img {
   width: 40px;
+}
+
+.tagline {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  flex-shrink: 2;
+}
+
+.tagline h3 {
+  font-family: 'Slabo 27px', serif;
 }

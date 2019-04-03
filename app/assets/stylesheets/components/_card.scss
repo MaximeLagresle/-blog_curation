@@ -1,12 +1,18 @@
 .card {
   height: 450px;
-  margin: 20px;
-  overflow: auto;
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-img {
   height: 200px;
   background-size: cover;
+  opacity: .85;
+
+  &:hover {
+    opacity: .95;
+  }
 }
 
 .card-details {
@@ -15,7 +21,12 @@
 }
 
 .card-title {
-  padding: 15px;
+  padding: 15px 15px 0px 15px;
+  margin: 0px;
+}
+
+.card-title h3 {
+  font-size: 1.2rem;
 }
 
 .card-title a:link, a:hover, a:active, a:visited {
@@ -30,5 +41,23 @@ a {
 }
 
 .card-description {
-  padding: 15px;
+  padding: 0px 15px 15px 15px;
+  // height: 100px;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+}
+
+.card-description p {
+  font-weight: lighter;
+  font-size: 0.9rem;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+}
+
+.card-published {
+  padding-left: 10px;
+}
+
+.card-published i {
+  font-size: 0.8rem;
 }

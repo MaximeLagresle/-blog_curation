@@ -8,7 +8,7 @@ namespace :sync do
     Blog.all.each do |blog|
       content = Feedjira::Feed.fetch_and_parse blog.url
       content.entries.each do |entry|
-        if Post.where(:title => entry.title).blank?
+        if Post.where(title: entry.title).blank?
           # no truck record for this id
           local_entry = Post.create! title: entry.title, description: entry.summary, url: entry.url, published: entry.published, blog: blog
         end
