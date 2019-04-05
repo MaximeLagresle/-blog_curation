@@ -1,4 +1,4 @@
-<!-- <div class="container">
+<div class="container">
 
   <div class="title_header">
     <h1>List of every blogs</h1>
@@ -6,23 +6,23 @@
 
   <div class="all_blogs">
     <div class="cards">
-      <#% @all_blogs.each do |blog| %>
+      <% @all_blogs.each do |blog| %>
         <div class="card">
           <div class="blog-photo">
-            <%#= cl_image_tag(blog.photo, :width=>40, :crop=>"scale") %>
+            <%= cl_image_tag(blog.photo, :width=>40, :crop=>"scale") %>
           </div>
           <div class="blog-tag">
             <%= blog.tag %>
           </div>
           <button type="button" class="btn btn-primary">Follow</button>
           <div class="blog-name">
-            <%#= blog.name %>
+            <%= blog.name %>
           </div>
           <div class="blog-description">
             <%= blog.description %>
           </div>
         </div>
-      <%# end %>
+      <% end %>
     </div>
 </div>
- -->
+

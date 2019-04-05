@@ -8,11 +8,6 @@
           <%= image_tag "logo.svg", height: 40 %>
         <% end %>
 
-
-     <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button> -->
-
         <!-- <div class="content">
           <div class="container-fluid"> -->
 
@@ -21,9 +16,9 @@
         </button>
          <!--  </div>
         </div> -->
-        <div class="tagline">
+        <!-- <div class="tagline">
           <h3>A moment of calm in the noisy world of growth and tech.</h3>
-        </div>
+        </div> -->
 
       </div>
 
@@ -55,7 +50,12 @@
   <!-- sidebar https://bootstrapious.com/p/bootstrap-sidebar -->
   <nav id="sidebar">
     <div class="sidebar-header">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+
+      <% if user_signed_in? %>
+        <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %></button>
+
+      <% end %>
+
     </div>
 
     <div class="blogs-list">
@@ -70,52 +70,46 @@
           </div>
         </div>
       <% end %>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">All blogs</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-blogs-modal-xl">All blogs</button>
     </div>
   </nav>
 </div>
 
 <!-- Large Blogs modal -->
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="container">
-
-        <div class="title_header">
-          <h1>List of every blogs</h1>
+<div>
+  <div class="modal fade bd-blogs-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
 
-        <div class="all_blogs">
-          <div class="cards">
-            <% @all_blogs.each do |blog| %>
-              <div class="card">
-                <div class="blog-photo">
-                  <%= cl_image_tag(blog.photo, :width=>40, :crop=>"scale") %>
-                </div>
-                <div class="blog-tag">
-                  <%= blog.tag %>
-                </div>
-                <button type="button" class="btn btn-primary">Follow</button>
-                <div class="blog-name">
-                  <%= blog.name %>
-                </div>
-                <div class="blog-description">
-                  <%= blog.description %>
-                </div>
-                <div class="blog-url">
-                  <%= blog.url %>
-                </div>
-              </div>
-            <% end %>
-          </div>
-      </div>
+        <%= render 'blogs/blogs_modal' %>
 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Large Profile modal -->
+
+<div>
+  <div class="modal fade bd-profile-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <%= render 'profile/profile_modal' %>
+
+      </div>
     </div>
   </div>
 </div>

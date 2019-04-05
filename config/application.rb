@@ -1,6 +1,6 @@
 require_relative 'boot'
 
-require 'carrierwave'
+# require 'carrierwave'
 
 require 'rails/all'
 
