@@ -70,7 +70,52 @@
           </div>
         </div>
       <% end %>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">All blogs</button>
     </div>
   </nav>
 </div>
 
+<!-- Large Blogs modal -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="container">
+
+        <div class="title_header">
+          <h1>List of every blogs</h1>
+        </div>
+
+        <div class="all_blogs">
+          <div class="cards">
+            <% @all_blogs.each do |blog| %>
+              <div class="card">
+                <div class="blog-photo">
+                  <%= cl_image_tag(blog.photo, :width=>40, :crop=>"scale") %>
+                </div>
+                <div class="blog-tag">
+                  <%= blog.tag %>
+                </div>
+                <button type="button" class="btn btn-primary">Follow</button>
+                <div class="blog-name">
+                  <%= blog.name %>
+                </div>
+                <div class="blog-description">
+                  <%= blog.description %>
+                </div>
+                <div class="blog-url">
+                  <%= blog.url %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>
