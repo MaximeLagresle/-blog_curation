@@ -52,7 +52,7 @@
     <div class="sidebar-header">
 
       <% if user_signed_in? %>
-        <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %></button>
+        <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= cl_image_tag current_user.picture, alt: "avatar-large" %></button>
 
       <% end %>
 

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  require 'carrierwave/orm/activerecord'
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :blogs
@@ -6,4 +7,6 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  mount_uploader :avatar, AvatarUploader
 end
