@@ -32,7 +32,7 @@
                   <%#= cl_image_tag(post.blog.photo, :width=>40, :crop=>"scale") %>
                 </div> -->
               <%# end %>
-              <div class="card-img" style="background-image: url('https://unsplash.it/500/400?random')";></div>
+              <div class="card-img"><%= post.image %></div>
               <div class="card-details">
                 <div class="card-published">
                   <i> Published <%= time_ago_in_words(post.published)%> ago.</i></div>
@@ -52,8 +52,13 @@
     <div class="sidebar-header">
 
       <% if user_signed_in? %>
-        <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= cl_image_tag current_user.picture, alt: "avatar-large" %></button>
-
+        <% if current_user.avatar.present? %>
+          <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= cl_image_tag(current_user.avatar, alt: "avatar-large") %></button>
+        <% else %>
+          <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= cl_image_tag('profile.svg') %></button>
+        <% end %>
+      <% else %>
+        <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= cl_image_tag("profile.svg", alt: "avatar-large") %></button>
       <% end %>
 
     </div>
@@ -71,6 +76,14 @@
         </div>
       <% end %>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-blogs-modal-xl">All blogs</button>
+    </div>
+
+    <div>
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      <% else %>
+        <%= link_to('Login', new_user_session_path)  %>
+      <% end %>
     </div>
   </nav>
 </div>
