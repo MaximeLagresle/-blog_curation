@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :blogs
   has_many :posts, through: :blogs
 
+  acts_as_follower
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 

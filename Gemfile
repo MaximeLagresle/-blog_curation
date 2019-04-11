@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'forest_liana'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
