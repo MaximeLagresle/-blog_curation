@@ -1,0 +1,6 @@
+function renderBlog(blogHTML) {
+  const blog = document.querySelector("#blog-<%= blog.id %>");
+  blog.outerHTML = blogHTML;
+}
+
+renderBlog('<%= j render @blogs_modal %>');

@@ -24,26 +24,23 @@
 
       <!-- cards grid -->
       <div class="cards">
-        <% @all_posts.each do |post| %>
-          <div class="card">
-            <%= link_to post.url, target: :_blank do %>
-              <%# @all_blogs.each do |blog| %>
-                <!-- <div class="blog-photo">
-                  <%#= cl_image_tag(post.blog.photo, :width=>40, :crop=>"scale") %>
-                </div> -->
-              <%# end %>
-              <div class="card-img"><%= post.image %></div>
-              <div class="card-details">
-                <div class="card-published">
-                  <i> Published <%= time_ago_in_words(post.published)%> ago.</i></div>
-                <div class="card-title"> <h3><%= post.title %></h3> </div>
-                <div class="card-description">
-                  <p><%= simple_format(post.description) %></p>
+        <%# current_user.all_following.each do |blog| %>
+          <% @all_posts.each do |post| %>
+            <div class="card">
+              <%= link_to post.url, target: :_blank do %>
+                <div class="card-img"><%= post.image %></div>
+                <div class="card-details">
+                  <div class="card-published">
+                    <i> Published <%= time_ago_in_words(post.published)%> ago.</i></div>
+                  <div class="card-title"> <h3><%= post.title %></h3> </div>
+                  <div class="card-description">
+                    <p><%= simple_format(post.description) %></p>
+                  </div>
                 </div>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
+              <% end %>
+            </div>
+          <% end %>
+        <%# end %>
       </div>
     </div>
 
@@ -67,13 +64,17 @@
 
       <p>BLOGS FOLLOWED</p>
 
-      <% @all_blogs.each do |blog| %>
+      <% current_user.all_following.each do |blog| %>
+        <!-- <div type="button" class="btn btn-primary" data-toggle="modal" data-target="#blog-modal", data: {blog_id: blog.id}> -->
         <div class="blog-combo">
-          <div class="blog-photo">
-            <%= cl_image_tag(blog.photo, :width=>25, :crop=>"scale") %>
-          </div>
-          <div class="blog-name">
-            <%= blog.name %>
+          <div> <%#= link_to blog, remote: true do %>
+              <div class="blog-photo">
+                <%= cl_image_tag(blog.photo, :width=>25, :crop=>"scale") %>
+              </div>
+              <div class="blog-name">
+                <%= blog.name %>
+              </div>
+            <%# end %>
           </div>
         </div>
       <% end %>
@@ -128,3 +129,13 @@
     </div>
   </div>
 </div>
+
+<!-- blog show page -->
+<!-- <div id='blog-content'>
+    <%#= link_to 'View Blog', blog_path(blog), remote: true %>
+</div> -->
+
+<!-- Single Blog modal -->
+<!-- <div>
+  <%#= render 'blogs/blog_modal' %>
+</div> -->

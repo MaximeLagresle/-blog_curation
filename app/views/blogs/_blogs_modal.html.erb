@@ -14,7 +14,27 @@
           <div class="blog-tag">
             <%= blog.tag %>
           </div>
-          <button type="button" class="btn btn-primary">Follow</button>
+
+          <!-- Follow Button -->
+
+          <div id="blog-<%= blog.id %>">
+            <%#= render 'blogs/blog' %>
+            <% if current_user.following?(blog) %>
+              <%= link_to "Unfollow", unfollow_blog_path(blog), method: :post, remote: true %>
+            <% else %>
+              <%= link_to "Follow", follow_blog_path(blog), method: :post, remote: true %>
+            <% end %>
+          </div>
+
+          <!-- https://medium.com/@alexmartin1124/the-magic-of-the-acts-as-follower-gem-100089299233 -->
+          <!-- <div class="button-outline" style="float: right">
+            <%# if current_user.following?(@blog) %>
+            <%#= button_to "Following", {action: 'unfollow', id: @blog.id}, method: 'post', class: 'btn btn-secondary btn-unfollow header-align', remote: true %>
+            <%# else %>
+            <%#= button_to "Follow", {action: 'follow', id: @blog.id}, method: 'post', class: 'btn btn-primary btn-follow header-align', remote: true %>
+            <%# end %>
+          </div> -->
+
           <div class="blog-name">
             <%= blog.name %>
           </div>
