@@ -1,0 +1,17 @@
+<div class="cards">
+  <% @my_posts.each do |post| %>
+    <div class="card">
+      <%= link_to post.url, target: :_blank do %>
+        <div class="card-img"><%= post.image %></div>
+        <div class="card-details">
+          <div class="card-published">
+            <i> Published <%= time_ago_in_words(post.published)%> ago.</i></div>
+          <div class="card-title"> <h3><%= post.title %></h3> </div>
+          <div class="card-description">
+            <p><%= simple_format(post.description) %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

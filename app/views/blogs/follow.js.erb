@@ -3,12 +3,20 @@ function renderBlog(blogHTML) {
   blog.innerHTML = blogHTML;
 }
 
-renderBlog('<%= j render "blogs/blog", blog: @blog %>');
 
 function refreshBlogFollowed(innerHTML) {
   const blogList = document.querySelector('.blogs-list');
   blogList.innerHTML = innerHTML;
 }
 
+
+function refreshPosts(innerHTML) {
+  const postsFeed = document.querySelector('.posts-feed');
+  postsFeed.innerHTML = innerHTML;
+}
+
+renderBlog('<%= j render "blogs/blog", blog: @blog %>');
+
 refreshBlogFollowed('<%= j render "shared/blogs_list" %>')
 
+refreshPosts('<%= j render "pages/posts_feed" %>')
