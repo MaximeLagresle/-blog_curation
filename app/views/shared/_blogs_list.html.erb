@@ -1,0 +1,15 @@
+<p>BLOGS FOLLOWED</p>
+
+<% current_user.all_following.each do |blog| %>
+  <div class="blog-combo">
+    <div> <%#= link_to blog, remote: true do %>
+        <div class="blog-photo">
+          <%= cl_image_tag(blog.photo, :width=>25, :crop=>"scale") %>
+        </div>
+        <div class="blog-name">
+          <%= blog.name %>
+        </div>
+      <%# end %>
+    </div>
+  </div>
+<% end %>

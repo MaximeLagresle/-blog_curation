@@ -62,24 +62,11 @@
 
     <div class="blogs-list">
 
-      <p>BLOGS FOLLOWED</p>
+      <%= render "shared/blogs_list" %>
 
-      <% current_user.all_following.each do |blog| %>
-        <!-- <div type="button" class="btn btn-primary" data-toggle="modal" data-target="#blog-modal", data: {blog_id: blog.id}> -->
-        <div class="blog-combo">
-          <div> <%#= link_to blog, remote: true do %>
-              <div class="blog-photo">
-                <%= cl_image_tag(blog.photo, :width=>25, :crop=>"scale") %>
-              </div>
-              <div class="blog-name">
-                <%= blog.name %>
-              </div>
-            <%# end %>
-          </div>
-        </div>
-      <% end %>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-blogs-modal-xl">All blogs</button>
     </div>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-blogs-modal-xl">All blogs</button>
 
     <div>
       <% if user_signed_in? %>
