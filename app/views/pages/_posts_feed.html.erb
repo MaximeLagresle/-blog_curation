@@ -2,7 +2,8 @@
   <% @my_posts.each do |post| %>
     <div class="card">
       <%= link_to post.url, target: :_blank do %>
-        <div class="card-img"><%= post.image %></div>
+        <div class="card-img"><%#= post.image %>
+        </div>
         <div class="card-details">
           <div class="card-published">
             <i> Published <%= time_ago_in_words(post.published)%> ago.</i></div>

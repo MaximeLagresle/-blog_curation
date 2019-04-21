@@ -11,6 +11,11 @@
         <!-- <div class="content">
           <div class="container-fluid"> -->
 
+        <div class="search-bar">
+          <input type="text" placeholder="Search..">
+        </div>
+
+
         <button class="navbar-toggler" type="button" id="sidebarCollapse" data-toggle="collapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,11 +59,11 @@
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-blogs-modal-xl">All blogs</button>
 
-    <div>
+    <div class='login-bottom'>
       <% if user_signed_in? %>
-        <%= link_to('<i class="fas fa-toggle-off toggle"></i>'.html_safe, destroy_user_session_path, method: :delete) %>
+        <%= link_to('<i class="fas fa-power-off toggle"></i>'.html_safe, destroy_user_session_path, method: :delete) %>
       <% else %>
-        <%= link_to('<i class="fas fa-toggle-on toggle"></i>'.html_safe, new_user_session_path)  %>
+        <%= link_to('<i class="fas fa-power-off toggle"></i>'.html_safe, new_user_session_path)  %>
       <% end %>
     </div>
   </nav>
@@ -108,7 +113,3 @@
     <%#= link_to 'View Blog', blog_path(blog), remote: true %>
 </div> -->
 
-<!-- Single Blog modal -->
-<!-- <div>
-  <%#= render 'blogs/blog_modal' %>
-</div> -->
