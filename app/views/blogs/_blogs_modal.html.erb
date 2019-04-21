@@ -1,23 +1,23 @@
 <div class="container">
 
   <div class="title_header">
-    <h1>List of every blogs</h1>
+    <h1>List of blogs</h1>
   </div>
 
   <div class="all_blogs">
     <div class="cards">
       <% @all_blogs.each do |blog| %>
         <div class="card">
-          <div class="blog-photo">
+          <div class="blog-logo">
             <%= cl_image_tag(blog.photo, :width=>40, :crop=>"scale") %>
           </div>
-          <div class="blog-tag">
-            <%= blog.tag %>
+          <div class="blog-name">
+            <%= blog.name %>
           </div>
 
           <!-- Follow Button -->
 
-          <div id="blog-<%= blog.id %>">
+          <div id="blog-<%= blog.id %>" class="button-outline">
             <%#= render 'blogs/blog' %>
             <% if current_user.following?(blog) %>
               <%= link_to "Unfollow", unfollow_blog_path(blog), method: :post, remote: true %>
@@ -26,9 +26,10 @@
             <% end %>
           </div>
 
-          <div class="blog-name">
-            <%= blog.name %>
+          <div>
+            <i class="fas fa-tag blog-tag"> <%= blog.tag %></i>
           </div>
+
           <div class="blog-description">
             <%= blog.description %>
           </div>

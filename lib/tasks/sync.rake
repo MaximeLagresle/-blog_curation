@@ -18,8 +18,8 @@ namespace :sync do
           description: entry.summary,
           url: entry.url,
           published: entry.published,
-          blog: blog,
-          image: entry.image
+          blog: blog
+          # image: entry.image
         end
         p "Synced Entry - #{entry.title}"
       end

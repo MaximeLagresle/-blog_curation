@@ -5,8 +5,23 @@
   }
 }
 
-.blog-photo {
+.blog-logo {
+  padding: 5px;
   display: flex;
   justify-content: center;
 }
 
+.blog-tag {
+  background: rgba(255, 255, 0,.3);
+  color: black;
+  padding: 5px;
+  margin: 10px;
+}
+
+.blog-name {
+  text-align: center;
+}
+
+.blog-description {
+  margin: 10px;
+}
