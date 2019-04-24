@@ -3,6 +3,7 @@
   background: white;
   position: relative;
   padding: 30px;
+  padding-bottom: 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -26,3 +27,13 @@
 .tagline h3 {
   font-family: 'Slabo 27px', serif;
 }
+
+.search-bar {
+  flex-grow: 2;
+  padding-left: 30px;
+}
+
+// .tagline-search {
+//   // display: flex;
+//   flex-direction: column;
+// }

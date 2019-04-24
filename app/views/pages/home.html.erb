@@ -4,26 +4,35 @@
       <!-- navbar -->
       <div class="navbar navbar-expand-sm navbar-light navbar-blog">
         <!-- Logo -->
-        <%= link_to root_path, class: "navbar-wagon-brand" do %>
-          <%= image_tag "logo.svg", height: 40 %>
-        <% end %>
-
-        <!-- <div class="content">
-          <div class="container-fluid"> -->
-
-        <div class="search-bar">
-          <input type="text" placeholder="Search..">
+        <div class="logo">
+          <%= link_to root_path, class: "navbar-wagon-brand" do %>
+            <%= image_tag "logo.svg", height: 40 %>
+          <% end %>
         </div>
 
+        <!-- <div class="tagline-search"> -->
+        <!-- Search Bar  -->
+        <div class="search-bar">
+          <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+            <div class="search-form-control form-group">
+              <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+              <button name="button" type="submit" class="btn btn-flat">
+                <i class="fas fa-search"></i> Search
+              </button>
+            </div>
+          <% end %>
+        </div>
+
+        <!-- tagline -->
+        <!-- <div class="tagline">
+          <h5>A moment of calm in the noisy world of growth and tech.</h5>
+        </div> -->
+
+        <!-- </div> -->
 
         <button class="navbar-toggler" type="button" id="sidebarCollapse" data-toggle="collapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-         <!--  </div>
-        </div> -->
-        <!-- <div class="tagline">
-          <h3>A moment of calm in the noisy world of growth and tech.</h3>
-        </div> -->
 
       </div>
 
@@ -37,19 +46,19 @@
 
   <!-- sidebar https://bootstrapious.com/p/bootstrap-sidebar -->
   <nav id="sidebar">
-    <div class="sidebar-header">
+    <!-- <div class="sidebar-header">
 
-      <% if user_signed_in? %>
-        <% if current_user.avatar.present? %>
-          <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= cl_image_tag(current_user.avatar, alt: "avatar-large") %></button>
-        <% else %>
-          <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= cl_image_tag('profile.svg') %></button>
-        <% end %>
-      <% else %>
-        <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%= cl_image_tag("profile.svg", alt: "avatar-large") %></button>
-      <% end %>
+      <#% if user_signed_in? %>
+        <#% if current_user.avatar.present? %>
+          <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%#= cl_image_tag(current_user.avatar, alt: "avatar-large") %></button>
+        <#% else %>
+          <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%#= cl_image_tag('profile.svg') %></button>
+        <#% end %>
+      <#% else %>
+        <button type="button" data-toggle="modal" data-target=".bd-profile-modal-xl"><%#= cl_image_tag("profile.svg", alt: "avatar-large") %></button>
+      <#% end %>
 
-    </div>
+    </div> -->
 
     <div class="blogs-list">
 
@@ -112,4 +121,3 @@
 <!-- <div id='blog-content'>
     <%#= link_to 'View Blog', blog_path(blog), remote: true %>
 </div> -->
-

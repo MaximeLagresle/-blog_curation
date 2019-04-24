@@ -2,7 +2,7 @@
   <p>My Blogs</p>
 </div>
 
-<% current_user.all_following.each do |blog| %>
+<% @my_blogs.each do |blog| %>
   <div class="blog-combo">
     <div class="blog-photo">
       <%= cl_image_tag(blog.photo, :width=>25, :crop=>"scale") %>
