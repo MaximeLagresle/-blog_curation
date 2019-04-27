@@ -10,16 +10,21 @@ namespace :sync do
     Blog.all.each do |blog|
       content = Feedjira::Feed.fetch_and_parse blog.url
       content.entries.each do |entry|
-        # binding.pry
         if Post.where(title: entry.title).blank?
-          # binding.pry
-          # no track record for this id
+          images = Nokogiri::HTML(entry.content).css('img')
+          if images.empty?
+            image_url = "https://unsplash.it/1500/800"
+          else
+            image_url = images.first.attributes['src'].value
+          end
+
           local_entry = Post.create! title: entry.title,
           description: entry.summary,
           url: entry.url,
           published: entry.published,
-          blog: blog
-          # image: entry.image
+          blog: blog,
+          image: image_url
+          # binding.pry
         end
         p "Synced Entry - #{entry.title}"
       end

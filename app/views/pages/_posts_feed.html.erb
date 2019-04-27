@@ -2,8 +2,8 @@
   <% @my_posts.each do |post| %>
     <div class="card">
       <%= link_to post.url, target: :_blank do %>
-        <div class="card-img"><%#= post.image %>
-          <img src="https://unsplash.it/1500/800" alt="image">
+        <%= cl_image_tag(post.blog.photo, :width=>25, :crop=>"scale") %>
+        <div class="card-img"><%= image_tag(post.image) %>
         </div>
         <div class="card-details">
           <div class="card-published">
@@ -17,3 +17,6 @@
     </div>
   <% end %>
 </div>
+
+<!-- random image -->
+<!-- <img src="https://unsplash.it/1500/800" alt="image"> -->
