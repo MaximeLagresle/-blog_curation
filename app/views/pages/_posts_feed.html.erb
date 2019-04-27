@@ -2,8 +2,9 @@
   <% @my_posts.each do |post| %>
     <div class="card">
       <%= link_to post.url, target: :_blank do %>
-        <%= cl_image_tag(post.blog.photo, :width=>25, :crop=>"scale") %>
-        <div class="card-img"><%= image_tag(post.image) %>
+        <div class="card-img">
+          <%= cl_image_tag(post.blog.photo, :class => "img_logo") %>
+          <%= image_tag(post.image, :class => "img_cover") %>
         </div>
         <div class="card-details">
           <div class="card-published">
