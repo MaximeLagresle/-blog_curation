@@ -9,7 +9,7 @@
       <% @all_blogs.each do |blog| %>
         <div class="card">
           <div class="blog-logo">
-            <%= cl_image_tag(blog.photo, :width=>40, :crop=>"scale") %>
+            <%= cl_image_tag(blog.photo, :width=>30, :crop=>"scale") %>
           </div>
           <div class="blog-title">
             <%= blog.name %>
@@ -20,9 +20,9 @@
           <div id="blog-<%= blog.id %>" class="button-outline">
             <% if user_signed_in? %>
               <% if current_user.following?(blog) %>
-                <%= link_to "Unfollow", unfollow_blog_path(blog), method: :post, remote: true %>
+                <%= link_to "Following", unfollow_blog_path(blog), method: :post, remote: true, id: "unfollow" %>
               <% else %>
-                <%= link_to "Follow", follow_blog_path(blog), method: :post, remote: true %>
+                <%= link_to "Follow", follow_blog_path(blog), method: :post, remote: true, id: "follow" %>
               <% end %>
             <% else %>
               <%= link_to "Follow", new_user_registration_path %>

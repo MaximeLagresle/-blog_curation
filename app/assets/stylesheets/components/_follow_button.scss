@@ -1,16 +1,25 @@
 .button-outline {
-  background-color: transparent;
-  border: 1px solid rgb(75,165,209);
+  // background-color: transparent;
   border-radius: 4px;
-  color: rgb(75,165,209);
   padding: 6px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: auto;
   margin: 4px auto;
-  &:hover {
-    background-color: rgb(75,165,209);
-    color: rgba(255,255,255,1);
+}
+
+.button-outline #follow {
+  border: 1px solid $blue;
+  color: $blue;
+}
+
+.button-outline #unfollow {
+  border: 1px solid $blue;
+  background: $blue;
+  color: white;
+  &:hover{
+    content:'Unfollow';
+    background: $dark-purple;
   }
 }

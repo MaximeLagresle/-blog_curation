@@ -19,7 +19,7 @@ namespace :sync do
           end
 
           local_entry = Post.create! title: entry.title,
-          description: entry.summary,
+          description: entry.summary.nil? ? entry.content : entry.summary,
           url: entry.url,
           published: entry.published,
           blog: blog,

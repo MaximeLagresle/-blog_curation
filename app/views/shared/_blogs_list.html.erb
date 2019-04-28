@@ -5,7 +5,7 @@
 <% @my_blogs.each do |blog| %>
   <div class="blog-combo">
     <div class="blog-photo">
-      <%= cl_image_tag(blog.photo, :width=>25, :crop=>"scale") %>
+      <%= cl_image_tag(blog.photo, :width=>30, :class => "img_cover") %>
     </div>
     <div class="blog-name">
       <%= blog.name %>

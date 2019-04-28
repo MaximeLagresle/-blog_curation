@@ -3,7 +3,7 @@
     <div class="card">
       <%= link_to post.url, target: :_blank do %>
         <div class="card-img">
-          <%= cl_image_tag(post.blog.photo, :radius=>50, :class => "img_logo") %>
+          <%= cl_image_tag(post.blog.photo, :radius=>50, :class => "img_logo", :quality=>"auto:best") %>
           <%= image_tag(post.image, :class => "img_cover") %>
         </div>
         <div class="card-details">
