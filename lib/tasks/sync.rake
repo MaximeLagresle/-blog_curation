@@ -13,7 +13,7 @@ namespace :sync do
         if Post.where(title: entry.title).blank?
           images = Nokogiri::HTML(entry.content).css('img')
           if images.empty?
-            image_url = "https://unsplash.it/1500/800"
+            image_url = "https://res.cloudinary.com/dnftriuml/image/upload/v1556392428/image-from-rawpixel-id-395105-jpeg.jpg"
           else
             image_url = images.first.attributes['src'].value
           end
