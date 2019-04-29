@@ -5,6 +5,33 @@
   }
 }
 
+#card-size {
+  height: 400px;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.title_header {
+  text-align: center;
+}
+
+.close {
+  color: $dark-purple;
+  opacity: .4;
+  outline: none !important;
+  box-shadow: none;
+  &:hover {
+    color: $dark-purple;
+    opacity: 1;
+  }
+}
+
+.light-gray {
+  background-color: $light-gray;
+}
+
 .blog-logo {
   padding: 5px;
   display: flex;
@@ -24,4 +51,14 @@
 
 .blog-description {
   margin: 10px;
+  font-weight: lighter;
+  font-size: 0.9rem;
 }
+
+.highlighted-purple {
+  // background-color: rgba(226, 89, 139, .1);
+  background-color: rgba(170, 92, 159, .1);
+  color: $light-purple;
+  padding: 5px;
+}
+

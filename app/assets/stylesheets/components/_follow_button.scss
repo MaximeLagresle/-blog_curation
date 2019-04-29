@@ -1,5 +1,5 @@
 .button-outline {
-  // background-color: transparent;
+  border: 1px solid $pink;
   border-radius: 4px;
   padding: 6px 12px;
   text-align: center;
@@ -9,17 +9,31 @@
   margin: 4px auto;
 }
 
-.button-outline #follow {
-  border: 1px solid $blue;
-  color: $blue;
-}
-
-.button-outline #unfollow {
-  border: 1px solid $blue;
-  background: $blue;
-  color: white;
-  &:hover{
-    content:'Unfollow';
-    background: $dark-purple;
+#following {
+  background-color: $pink;
+  & a {
+    color: white;
   }
 }
+
+#follow {
+  background-color: white;
+  & a {
+    color: $pink;
+  }
+  &:hover {
+    background-color: rgba(226, 89, 139, .1);
+    & a {
+      color: $pink;
+    }
+  }
+}
+// #unfollow {
+//   border: 1px solid $blue;
+//   background: $blue;
+//   color: white;
+//   &:hover{
+//     .button-outline {content:'Unfollow'};
+//     background: $dark-purple;
+//   }
+// }

@@ -1,0 +1,20 @@
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $pink;
+  transition: background 0.3s ease;
+  opacity: 0.95;
+  text-decoration: none;
+}
+
+.btn-flat:hover {
+  opacity: 1;
+  color: white;
+  text-decoration: none;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}

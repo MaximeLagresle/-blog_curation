@@ -21,16 +21,3 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: $pink;
-  transition: background 0.3s ease;
-  opacity: 0.95;
-}
-
-.btn-flat:hover {
-  opacity: 1;
-  color: white;
-}
