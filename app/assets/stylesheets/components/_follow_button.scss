@@ -11,29 +11,18 @@
 
 #following {
   background-color: $pink;
-  & a {
-    color: white;
-  }
+  color: white;
 }
 
 #follow {
   background-color: white;
-  & a {
-    color: $pink;
-  }
+  color: $pink;
   &:hover {
     background-color: rgba(226, 89, 139, .1);
-    & a {
-      color: $pink;
-    }
+    color: $pink;
   }
 }
-// #unfollow {
-//   border: 1px solid $blue;
-//   background: $blue;
-//   color: white;
-//   &:hover{
-//     .button-outline {content:'Unfollow'};
-//     background: $dark-purple;
-//   }
-// }
+
+.center-button {
+  text-align: center;
+}

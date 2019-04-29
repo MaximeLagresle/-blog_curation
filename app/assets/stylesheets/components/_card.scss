@@ -2,6 +2,7 @@
   height: 500px;
   margin: 5px;
   overflow: hidden;
+  border-radius: 5px;
   // text-overflow: ellipsis;
   &:hover{
     -moz-box-shadow:    0px 2px 2px 0px #ccc;
@@ -38,7 +39,7 @@
 }
 
 .card-title {
-  padding: 15px 15px 0px 15px;
+  padding: 5px 15px 0px 15px;
   margin: 0px;
 }
 
@@ -50,7 +51,7 @@
   text-decoration: none;
 }
 
-a h3 {
+h3 {
   color: black;
   &:hover {
     color: black;

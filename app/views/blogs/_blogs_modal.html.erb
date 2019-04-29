@@ -1,38 +1,45 @@
 <div class="container">
 
+  <!-- Modal Title -->
+
   <div class="title_header">
-    <h1>Handcrafted <span class="highlighted-purple">Growth</span>  Blog List</h1>
+    <h1>Handcrafted List of Blogs on <span class="highlighted-purple">Growth</span></h1>
   </div>
 
   <div class="all_blogs">
     <div class="cards">
       <% @all_blogs.each do |blog| %>
         <div class="card" id="card-size">
-          <div class="blog-logo">
-            <%= cl_image_tag(blog.photo, :width=>30, :crop=>"scale") %>
+
+          <!-- Blog Logo -->
+
+          <div>
+            <%= cl_image_tag(blog.photo, :width=>60, class: "blog-logo") %>
           </div>
+
+          <!-- Blog Name -->
+
           <div class="card-title blog-title">
             <h3><%= blog.name %></h3>
           </div>
 
           <!-- Follow Button -->
 
-          <div id="blog-<%= blog.id %>" class="button-outline">
+          <div id="blog-<%= blog.id %>" class="center-button">
             <% if user_signed_in? %>
               <%= render "blogs/blog", :blog => blog %>
-              <%# if current_user.following?(blog) %>
-                <%#= link_to "Following", unfollow_blog_path(blog), method: :post, remote: true, id: "following" %>
-              <%# else %>
-                <%#= link_to "Follow", follow_blog_path(blog), method: :post, remote: true, id: "follow" %>
-              <%# end %>
             <% else %>
-              <%= link_to "Follow", new_user_registration_path %>
+              <%= link_to "Follow", new_user_registration_path,  class: "button-outline" %>
             <% end %>
           </div>
+
+          <!-- Blog Tag -->
 
           <div>
             <i class="fas fa-tag blog-tag"> <%= blog.tag %></i>
           </div>
+
+          <!-- Blog Description -->
 
           <div class="blog-description">
             <%= blog.description %>

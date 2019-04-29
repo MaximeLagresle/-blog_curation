@@ -1,5 +1,5 @@
 <% if current_user.following?(blog) %>
-  <%= link_to "Following", unfollow_blog_path(blog), method: :post, remote: true, id: "following" %>
+  <%= link_to "Following", unfollow_blog_path(blog), method: :post, remote: true, id: "following", class: "button-outline" %>
 <% else %>
-  <%= link_to "Follow", follow_blog_path(blog), method: :post, remote: true, id: "follow" %>
+  <%= link_to "Follow", follow_blog_path(blog), method: :post, remote: true, id: "follow", class: "button-outline" %>
 <% end %>

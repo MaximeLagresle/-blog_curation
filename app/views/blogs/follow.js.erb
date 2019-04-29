@@ -15,8 +15,8 @@ function refreshPosts(innerHTML) {
   postsFeed.innerHTML = innerHTML;
 }
 
+refreshPosts('<%= j render "pages/posts_feed" %>')
+refreshBlogFollowed('<%= j render "shared/blogs_list" %>')
 renderBlog('<%= j render "blogs/blog", blog: @blog %>');
 
-refreshBlogFollowed('<%= j render "shared/blogs_list" %>')
 
-refreshPosts('<%= j render "pages/posts_feed" %>')

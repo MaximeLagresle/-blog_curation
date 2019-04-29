@@ -47,8 +47,8 @@
 .blog-combo {
   display: flex;
   flex-direction: row;
-  padding: 14px;
-  border: 1px solid $light-purple;
+  // padding: 14px;
+  // border: 1px solid $light-purple;
   margin: 10px;
   border-radius: 4px;
 }
@@ -68,12 +68,13 @@
 
 .blogs-list {
   margin-top: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .my-blogs {
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 #lean_overlay {
