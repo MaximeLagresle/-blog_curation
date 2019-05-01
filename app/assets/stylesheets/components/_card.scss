@@ -3,7 +3,7 @@
   margin: 5px;
   overflow: hidden;
   border-radius: 5px;
-  // text-overflow: ellipsis;
+  text-overflow: ellipsis;
   &:hover{
     -moz-box-shadow:    0px 2px 2px 0px #ccc;
     -webkit-box-shadow: 0px 2px 2px 0px #ccc;
@@ -68,8 +68,8 @@ a {
 .card-description {
   padding: 0px 15px 15px 15px;
   // height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
 }
 
 .card-description p {
@@ -80,7 +80,7 @@ a {
 }
 
 .card-published {
-  padding-left: 10px;
+  padding: 10px;
 }
 
 .card-published i {
