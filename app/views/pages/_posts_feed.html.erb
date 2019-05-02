@@ -16,7 +16,7 @@
           </div>
           <div class="card-title"> <h3><%= post.title %></h3> </div>
           <div class="card-description">
-            <p><%= truncate(simple_format(post.description), length: 200, separator: ' ') %></p>
+            <p><%= truncate(strip_tags(post.description), length: 200, separator: ' ') %></p>
           </div>
           <!-- <div class="card-footer">
           </div> -->
