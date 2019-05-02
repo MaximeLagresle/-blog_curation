@@ -18,8 +18,6 @@ namespace :sync do
             image_url = images.first.attributes['src'].value
           end
 
-          # plain_text = Nokogiri::HTML(entry).text
-
           local_entry = Post.create! title: entry.title,
           description: entry.summary.nil? ? entry.content.scan(/<p>.*<\/p>/).join().sub(/<a href=.*">/, '').sub(/The post .* appeared first on .*/, '') : entry.summary.sub(/<a href=.*">/, '').sub(/The post .* appeared first on .*/, ''),
           url: entry.url,
