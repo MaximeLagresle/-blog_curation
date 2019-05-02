@@ -21,8 +21,9 @@
 
 .card-img .img_cover {
   height: 200px;
-  background-size: cover !important;
+  width: 100%;
   opacity: .75;
+  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
 
 .img_logo {
