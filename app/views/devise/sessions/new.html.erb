@@ -1,7 +1,8 @@
+<!-- Find the active Signin page under views/users/sessions/new.html.erb -->
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-      <h2>Log in</h2>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <h2>Login</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
@@ -16,7 +17,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
+          <%= f.button :submit, "Log in", class: "btn btn-primary" %>
         </div>
       <% end %>
 

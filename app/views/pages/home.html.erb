@@ -70,10 +70,10 @@
 
     <div class='login-bottom'>
       <% if user_signed_in? %>
-        <button id="sweet-alert"><i class="fas fa-power-off toggle"></i></button>
+        <button id="swal-logout"><i class="fas fa-power-off toggle"></i></button>
         <%= link_to '', destroy_user_session_path, method: :delete, id: "logout-user", class: "hidden" %>
       <% else %>
-        <%= link_to('<i class="fas fa-power-off toggle"></i>'.html_safe, new_user_session_path)  %>
+        <%= link_to('<i class="fas fa-power-off toggle"></i>'.html_safe, new_user_session_path, "data-toggle" => "modal", 'data-target' => "#loginModal")  %>
       <% end %>
     </div>
   </nav>
@@ -122,3 +122,23 @@
 <!-- <div id='blog-content'>
     <%#= link_to 'View Blog', blog_path(blog), remote: true %>
 </div> -->
+
+<!-- Signin Modal -->
+<div>
+  <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content form-login">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalTitle">Log in</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <%= render 'users/sessions/new' %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
