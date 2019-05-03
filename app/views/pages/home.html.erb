@@ -70,7 +70,8 @@
 
     <div class='login-bottom'>
       <% if user_signed_in? %>
-        <%= link_to('<i class="fas fa-power-off toggle"></i>'.html_safe, destroy_user_session_path, method: :delete, id: "sweet-alert") %>
+        <button id="sweet-alert"><i class="fas fa-power-off toggle"></i></button>
+        <%= link_to '', destroy_user_session_path, method: :delete, id: "logout-user", class: "hidden" %>
       <% else %>
         <%= link_to('<i class="fas fa-power-off toggle"></i>'.html_safe, new_user_session_path)  %>
       <% end %>

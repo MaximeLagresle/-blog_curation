@@ -2,8 +2,8 @@ import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
   new Typed('#header-typed-text', {
-    strings: ["Growth Strategy", "Product Strategy"],
-    typeSpeed: 50,
+    strings: ["Growth Strategy", "Product Strategy", "Growth Strategy"],
+    typeSpeed: 120,
     loop: true
   });
 }
