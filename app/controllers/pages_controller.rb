@@ -1,12 +1,9 @@
-require 'pry-byebug'
-
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
     @all_blogs = Blog.all
     @all_posts = Post.all.order('published desc')
-
 
     if user_signed_in?
       @my_blogs = current_user.all_following
