@@ -12,9 +12,14 @@
 // export { hideShowModals };
 
 const hideShowModals = () => {
-  const followButton = document.querySelector("#sign-up-modal");
-  followButton.addEventListener("click", (event) => {
-    console.log("Hello");
+  const cards = document.querySelectorAll(".card-size");
+  cards.forEach((card) => {
+    const followButton = document.querySelector("#sign-up-modal");
+    followButton.addEventListener("click", (event) => {
+      console.log("Hello");
+      // $('.bd-blogs-modal-xl').modal('hide');
+      // $('#signupModal').modal('show');
+    });
   });
 }
 

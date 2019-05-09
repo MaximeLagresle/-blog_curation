@@ -46,3 +46,4 @@ initSweetalert('#swal-logout', {
 // -------------------------
 
 import { hideShowModals } from '../components/modal';
+hideShowModals();
