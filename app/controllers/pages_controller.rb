@@ -9,7 +9,7 @@ class PagesController < ApplicationController
       @my_blogs = current_user.all_following
       @my_posts = @all_posts.select { |post| @my_blogs.include?(post.blog) }
     else
-      @my_blogs = [Blog.find(7), Blog.find(9)]
+      @my_blogs = [Blog.find(1), Blog.find(2)]
       @my_posts = @all_posts.select { |post| @my_blogs.include?(post.blog) }
       # binding.pry
     end
