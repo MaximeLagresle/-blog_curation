@@ -41,9 +41,3 @@ initSweetalert('#swal-logout', {
     link.click();
   }
 });
-
-
-// -------------------------
-
-import { hideShowModals } from '../components/modal';
-hideShowModals();

@@ -1,3 +1,4 @@
+
 <div class="container">
 
   <!-- Modal Title -->
@@ -29,7 +30,7 @@
             <% if user_signed_in? %>
               <%= render "blogs/blog", :blog => blog %>
             <% else %>
-              <%= link_to "Follow", new_user_registration_path,  class: "button-outline", id: "sign-up-modal", "data-toggle" => "modal", 'data-target' => "#signupModal" %>
+              <%= link_to "Follow", new_user_registration_path,  class: "button-outline", id: "sign-up-modal", "data-toggle" => "modal", 'data-target' => "#signupModal", 'data-dismiss' => 'modal' %>
             <% end %>
           </div>
 
@@ -47,24 +48,9 @@
         </div>
       <% end %>
     </div>
-</div>
-
-<!-- Signup Modal -->
-<div>
-  <div class="modal" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content form-login">
-        <div class="modal-header">
-          <h5 class="modal-title" id="signupModalTitle">Sign up</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <%= render 'users/registrations/new' %>
-
-      </div>
-    </div>
   </div>
 </div>
+
+
+
 
