@@ -9,7 +9,7 @@ class PagesController < ApplicationController
       @my_blogs = current_user.all_following
       @my_posts = @all_posts.select { |post| @my_blogs.include?(post.blog) }
     else
-      @my_blogs = [Blog.find_by_name('a16z'), Blog.find_by_name('intercom')]
+      @my_blogs = [Blog.find_by_name('a16z'), Blog.find_by_name('Intercom')]
       @my_posts = @all_posts.select { |post| @my_blogs.include?(post.blog) }
       # binding.pry
     end
