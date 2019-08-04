@@ -1,11 +1,15 @@
 import "bootstrap";
 
-$(document).ready(function () {
+$(document).on('click touchstart', '.nav', function() {
+  $("body").toggleClass("show-sidebar");
+  $(".nav .fa").toggleClass("fa-navicon fa-times");
+  $(".body-overlay").toggleClass("body-overlay-apply");
+});
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
-
+$(document).on('click touchstart', '.body-overlay-apply', function() {
+  $("body").toggleClass("show-sidebar");
+  $(".nav .fa").toggleClass("fa-navicon fa-times");
+  $(".body-overlay").toggleClass("body-overlay-apply");
 });
 
 // -------------------------

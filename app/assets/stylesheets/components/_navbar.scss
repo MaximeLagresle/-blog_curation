@@ -1,39 +1,14 @@
-.navbar-blog {
-  justify-content: space-between;
-  background: white;
-  position: relative;
-  padding: 30px;
+.nav {
+  cursor: pointer;
+  padding: 20px;
   padding-bottom: 20px;
-  position: sticky;
-  top: 0;
   z-index: 1000;
 }
 
-.navbar-blog .navbar-collapse {
-  flex-grow: 0;
+.pink {
+  color: $pink !important;
 }
 
-.navbar-blog .navbar-brand img {
-  width: 40px;
+.font-logo {
+  font-family: $title;
 }
-
-.tagline {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  flex-shrink: 2;
-}
-
-.tagline h3 {
-  font-family: 'Slabo 27px', serif;
-}
-
-.search-bar {
-  flex-grow: 2;
-  padding-left: 30px;
-}
-
-// .tagline-search {
-//   // display: flex;
-//   flex-direction: column;
-// }

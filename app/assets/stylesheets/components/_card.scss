@@ -1,10 +1,7 @@
 .card {
   height: 500px;
   margin: 5px;
-  // overflow: hidden;
-  border-radius: 5px;
-  // text-overflow: ellipsis;
-  // position: relative
+  border-radius: 15px;
   &:hover{
     -moz-box-shadow:    0px 3px 3px 0px #ccc;
     -webkit-box-shadow: 0px 3px 3px 0px #ccc;
@@ -24,6 +21,7 @@
   height: 200px;
   width: 100%;
   opacity: .75;
+  border-radius: 15px 15px 0 0;
   &:hover {
     // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
   }
@@ -36,7 +34,7 @@
 }
 
 .card-title {
-  padding: 5px 15px 0px 15px;
+  padding: 15px;
   margin: 0px;
 }
 
