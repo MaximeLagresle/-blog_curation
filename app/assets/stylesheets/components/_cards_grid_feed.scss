@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
-  padding: 2vw 4vw;
+  padding: 2vw 8vw;
   max-width: 1600px;
 }
 
@@ -10,6 +10,7 @@
 @media (min-width: 100px) and (max-width: 575px) {
   .cards-feed {
     grid-template-columns: 1fr;
+    padding: 10vw 10vw;
   }
 }
 
@@ -17,6 +18,7 @@
 @media (min-width: 576px) {
   .cards-feed {
     grid-template-columns: 1fr;
+    padding: 4vw 20vw;
   }
 }
 
@@ -24,6 +26,7 @@
 @media (min-width: 768px) {
   .cards-feed {
     grid-template-columns: 1fr 1fr;
+    padding: 4vw 8vw;
   }
 }
 
@@ -32,7 +35,7 @@
   .cards-feed {
     grid-template-columns: 1fr 1fr;
     grid-gap: 100px;
-    padding: 2vw 8vw;
+    padding: 4vw 8vw;
   }
 }
 
@@ -41,7 +44,7 @@
   .cards-feed {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
-    padding: 2vw 4vw;
+    padding: 4vw 8vw;
   }
 }
 
@@ -50,6 +53,6 @@
   .cards-feed {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
-    padding: 2vw 4vw;
+    padding: 4vw 8vw;
   }
 }

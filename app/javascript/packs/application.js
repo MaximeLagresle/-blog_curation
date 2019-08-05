@@ -48,6 +48,36 @@ initSweetalert('#swal-logout', {
 
 // --------------------------------
 
+$(function() {
+  $('#cta-smart').click(function(){
+    console.log("hello");
+    $("body").toggleClass("show-sidebar");
+    $(".nav .fa").toggleClass("fa-navicon fa-times");
+    $(".body-overlay").toggleClass("body-overlay-apply");
+    $('#blog-modal').modal('toggle')
+  });
+});
+
+$(function() {
+  $('#login-user').click(function(){
+    console.log("hello");
+    $("body").toggleClass("show-sidebar");
+    $(".nav .fa").toggleClass("fa-navicon fa-times");
+    $(".body-overlay").toggleClass("body-overlay-apply");
+    $('#signinModal').modal('toggle')
+  });
+});
+
+$(function() {
+  $('#swal-logout').click(function(){
+    console.log("hello");
+    $("body").toggleClass("show-sidebar");
+    $(".nav .fa").toggleClass("fa-navicon fa-times");
+    $(".body-overlay").toggleClass("body-overlay-apply");
+    $('#logout-user').modal('toggle')
+  });
+});
+
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
