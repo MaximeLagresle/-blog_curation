@@ -3,13 +3,13 @@ class BlogsController < ApplicationController
 
   def follow
     set_blog
-    set_feed
     current_user.follow(@blog)
     @follow = Follow.find_by(follower: current_user, followable: @blog)
     respond_to do |format|
       format.html { redirect_to root_path }
-      format.js
+      format.js # <-- will render `app/views/blogs/follow.js.erb`
     end
+    set_feed
   end
 
   def unfollow

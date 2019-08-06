@@ -3,20 +3,18 @@ function renderBlog(blogHTML) {
   blog.innerHTML = blogHTML;
 }
 
-
 function refreshBlogFollowed(innerHTML) {
   const blogList = document.querySelector('.blogs-list');
   blogList.innerHTML = innerHTML;
 }
-
 
 function refreshPosts(innerHTML) {
   const postsFeed = document.querySelector('.posts-feed');
   postsFeed.innerHTML = innerHTML;
 }
 
-refreshPosts('<%= j render "pages/posts_feed" %>')
-refreshBlogFollowed('<%= j render "shared/blogs_list" %>')
+refreshPosts('<%= j render "pages/posts_feed" %>');
+refreshBlogFollowed('<%= j render "shared/blogs_list" %>');
 renderBlog('<%= j render "blogs/blog", blog: @blog %>');
 
 
