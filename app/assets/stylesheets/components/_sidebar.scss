@@ -91,6 +91,10 @@ body.show-sidebar .push-right {
     margin-left: -50%;
   }
 
+  .login-bottom {
+    width: 46%;
+  }
+
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -102,6 +106,10 @@ body.show-sidebar .push-right {
 
   body.show-sidebar  {
     margin-left: -40%;
+  }
+
+  .login-bottom {
+    width: 40%;
   }
 }
 
@@ -115,6 +123,10 @@ body.show-sidebar .push-right {
   body.show-sidebar  {
     margin-left: -30%;
   }
+
+  .login-bottom {
+    width: 30%;
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -127,6 +139,10 @@ body.show-sidebar .push-right {
   body.show-sidebar  {
     margin-left: -25%;
   }
+
+  .login-bottom {
+    width: 25%;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -138,5 +154,9 @@ body.show-sidebar .push-right {
 
   body.show-sidebar  {
     margin-left: -20%;
+  }
+
+  .login-bottom {
+    width: 20%;
   }
 }

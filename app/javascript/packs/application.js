@@ -50,7 +50,6 @@ initSweetalert('#swal-logout', {
 
 $(function() {
   $('#cta-smart').click(function(){
-    console.log("hello");
     $("body").toggleClass("show-sidebar");
     $(".nav .fa").toggleClass("fa-navicon fa-times");
     $(".body-overlay").toggleClass("body-overlay-apply");
@@ -60,7 +59,6 @@ $(function() {
 
 $(function() {
   $('#login-user').click(function(){
-    console.log("hello");
     $("body").toggleClass("show-sidebar");
     $(".nav .fa").toggleClass("fa-navicon fa-times");
     $(".body-overlay").toggleClass("body-overlay-apply");
@@ -70,7 +68,6 @@ $(function() {
 
 $(function() {
   $('#swal-logout').click(function(){
-    console.log("hello");
     $("body").toggleClass("show-sidebar");
     $(".nav .fa").toggleClass("fa-navicon fa-times");
     $(".body-overlay").toggleClass("body-overlay-apply");
