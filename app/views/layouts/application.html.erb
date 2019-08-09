@@ -11,13 +11,43 @@
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
   </head>
   <body>
     <%= render 'shared/flashes' %>
+    <%= render "welcome/login_modal" %>
+    <%= render "welcome/sign_up_modal" %>
+    <%= render "welcome/forgot_password" %>
 
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+
+
+<!-- a16z and Intercom following cta in modal when no user signed in -->
+<!--     <script type="text/javascript">
+      $(document).on(function() {
+        console.log( "ready!" );
+        var follow = $("#follow");
+        var unfollow = $("#unfollow");
+        var intercom = $("#blog-7");
+        var a16z = $("#blog-9");
+
+        $("#cta-smart").on("click", function(){
+
+        console.log('hello');
+        <%# if !user_signed_in? %>
+
+          intercom.removeAttr('#follow');
+          intercom.attr('#unfollow');
+
+        <%# else %>
+
+        <%# end %>
+
+        });
+      });
+    </script> -->
 
   </body>
 </html>
