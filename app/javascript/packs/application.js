@@ -14,11 +14,6 @@ $(document).on('click touchstart', '.body-overlay-apply', function() {
 
 // -------------------------
 
-import { loadDynamicBannerText } from '../components/typed';
-loadDynamicBannerText();
-
-// -------------------------
-
 import { initSweetalert } from '../components/sweet-alert';
 
 initSweetalert('#swal-logout', {
