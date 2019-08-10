@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+gem 'pagy'
+
 # https://richonrails.com/articles/adding-social-sharing-buttons-to-your-rails-app
 gem 'social-share-button'
 

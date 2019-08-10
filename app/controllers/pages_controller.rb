@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @all_blogs = Blog.all
-    @all_posts = Post.all.order('published desc')
+    @pagy, @all_posts = pagy_countless(Post.all.order('published desc'))
 
     if user_signed_in?
       @my_blogs = current_user.all_following
