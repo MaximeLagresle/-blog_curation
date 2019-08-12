@@ -70,4 +70,19 @@ $(function() {
   });
 });
 
+// ------------------------------------------
+
+const loadNextPage = function(){
+  if ($('#next_link').data("loading")){ return }  // prevent multiple loading
+  const wBottom  = $(window).scrollTop() + $(window).height();
+  const elBottom = $('#home-feed').offset().top + $('#home-feed').height();
+  if (wBottom > elBottom){
+    $('#next_link')[0].click();
+    $('#next_link').data("loading", true);
+  }
+};
+
+window.addEventListener('resize', loadNextPage);
+window.addEventListener('scroll', loadNextPage);
+window.addEventListener('load',   loadNextPage);
 

@@ -25,13 +25,15 @@
     </div>
   </div>
 
-  <div class="posts-feed">
-
-  <%= render "pages/posts_feed" %>
-
+  <div class="posts-feed" id="home-feed">
+    <%= render "pages/posts_feed" %>
   </div>
 
-  <%== pagy_nav(@pagy) %>
+  <div id="div_next_link">
+    <%= render 'pages/next_link' %>
+  </div>
+
+  <%#== pagy_nav(@pagy) %>
 
 </div>
 

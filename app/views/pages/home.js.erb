@@ -1,0 +1,4 @@
+$( document ).ready(function() {
+  $('#home-feed').append("<%= j(render 'posts_feed')%>");
+  $('#div_next_link').html("<%= j(render 'next_link') %>");
+});
