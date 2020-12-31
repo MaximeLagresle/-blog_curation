@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/tcocca/acts_as_follower.git
+  remote: https://github.com/tcocca/acts_as_follower.git
   revision: c5ac7b9601c4af01eb4d9112330b27be4d694ecc
   branch: master
   specs:
@@ -163,7 +163,7 @@ GEM
     multipart-post (2.0.0)
     netrc (0.11.0)
     nio4r (2.3.1)
-    nokogiri (1.10.2)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pagy (3.4.1)
@@ -299,7 +299,7 @@ DEPENDENCIES
   forest_liana
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
-  nokogiri (~> 1.6, >= 1.6.8)
+  nokogiri (~> 1.10)
   pagy
   pg (~> 0.21)
   pry-byebug
